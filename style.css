@@ -1,0 +1,9 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  
+}
+body{
+  height: 100vh;
+  background:linear-gradient(66.66deg, #00C1FE 19.39% ,#FAFFC1 96.69% ) ;
+}
