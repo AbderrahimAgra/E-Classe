@@ -1,0 +1,31 @@
+
+.sidebar{
+  background-color: #FAFFC1;
+}
+.icons{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.search-btn{
+  position: relative;
+  right: 20px;
+}
+.student__card {
+  background: rgba(240, 249, 255, 1);
+
+}
+.course__card{
+  background: rgba(254, 246, 251, 1);
+
+}
+.payments__card{
+  background: rgba(254, 251, 236, 1);
+
+}
+.Users__card{
+  background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
+
+}
+.cards > *{
+  margin-bottom: 1rem;
+}
