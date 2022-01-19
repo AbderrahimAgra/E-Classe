@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="styl__dashboard.css">
       <link rel="stylesheet" href="comun.css">
 
-    <title>dashboard</title>
+    <title>payment</title>
   </head>
 
   <body>
@@ -28,7 +28,7 @@
           <!-- list-unstyled -->
           <ul class="list-unstyled w-md-75 btn d-flex flex-column gap-2">
               <li>
-                <a href="#" class="btn btn-info w-100 text-dark  ">
+                <a href="http://127.0.0.1:5500/dashbord.html" class="btn w-100 text-dark  ">
                   <img class="icons" src="images/ic-home.svg" alt="logo">
                   <span class="w-50 d-none d-md-inline-block">Home</span>
                 </a>
@@ -46,7 +46,7 @@
                 </a>
               </li>
               <li>
-                <a href="http://127.0.0.1:5500/payment.html" class="btn">
+                <a href="http://127.0.0.1:5500/payment.html" class="btn btn-info w-100 text-dark">
                   <img src="images/payment.svg" alt="logo" class="icons">
                   <span class="w-50 d-none d-md-inline-block">Payement</span>
                 </a>
@@ -72,7 +72,8 @@
           </ul>
         </div>
         <!-- zone de la droite-->
-        <div class="col-10 col-md-9 ">
+        <div class="col-10 col-md-9 bg-light ">
+          <!-- nav -->
           <div class="row navbar-con">
             <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
               <div class="navbar-brand">
@@ -92,47 +93,83 @@
             </nav>
 
           </div>
-          <div class="row cards">
-            <div class="col-12 col-md-6 col-lg-3 ">
-              <div class="card student__card">
-                <div class="card-body d-flex flex-column align-items-start">
-                  <img src="images/ic-big-students.svg" alt="logo">
-                  <p> students</p>
-                  <h3 class="align-self-end">243</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 ">
-              <div class="card course__card">
-                <div class="card-body d-flex flex-column align-items-start">
-                  <img src="images/ic-big-course.svg" alt="logo">
-                  <p> course</p>
-                  <h3 class="align-self-end">13</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 ">
-              <div class="card payments__card">
-                <div class="card-body d-flex flex-column align-items-start">
-                  <img src="images/ic-big-payments.svg" alt="logo">
-                  <p> payments</p>
-                  <h3 class="align-self-end"> DHS 556,000</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3 ">
-              <div class="card Users__card">
-                <div class="card-body d-flex flex-column align-items-start">
-                  <img src="images/ic-big-users.svg" alt="logo">
-                  <p class="text-light"> Users </p>
-                  <h3 class="align-self-end">3</h3>
-                </div>
+          <!-- barre de comande -->
+          <div class="row  ">
+            <div class="col  d-flex justify-content-between">
+              <h3> Payment details</h3>
+              <div class="btns">
+                <img src="images/Sorte.svg" alt="logo" class="btn ">
               </div>
             </div>
           </div>
+          <!-- tabl -->
+          <div class="row ">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Nam</th>
+                  <th scope="col">Payment schedule</th>
+                  <th scope="col">Bill number</th>
+                  <th scope="col">Amount paid</th>
+                  <th scope="col">Balance amount</th>
+                  <th scope="col">Date</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Karthi</td>
+                  <td>First</td>
+                  <td>00012223</td>
+                  <td>DHS 100,000</td>
+                  <td>DHS 500,000</td>
+                  <td>05-jan-2022</td>
+                  <td><img src="images/showDetails.svg" alt=""></td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tbody>
+                  <tr>
+                    <td>Karthi</td>
+                    <td>First</td>
+                    <td>00012223</td>
+                    <td>DHS 100,000</td>
+                    <td>DHS 500,000</td>
+                    <td>05-jan-2022</td>
+                    <td><img src="images/showDetails.svg" alt=""></td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tbody>
+                    <tr>
+                      <td>Karthi</td>
+                      <td>First</td>
+                      <td>00012223</td>
+                      <td>DHS 100,000</td>
+                      <td>DHS 500,000</td>
+                      <td>05-jan-2022</td>
+                      <td><img src="images/showDetails.svg" alt=""></td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tbody>
+                      <tr>
+                        <td>Karthi</td>
+                        <td>First</td>
+                        <td>00012223</td>
+                        <td>DHS 100,000</td>
+                        <td>DHS 500,000</td>
+                        <td>05-jan-2022</td>
+                        <td><img src="images/showDetails.svg" alt=""></td>
+                      </tr>
+                    </tbody>
+                    <tbody>
+                         
+              
+            </table>
 
+          </div>
         </div>
-      </div>
     </div>
 
     <body>
