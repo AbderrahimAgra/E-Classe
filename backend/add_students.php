@@ -10,7 +10,7 @@
 <body>
 
 <div class="container">
-<form >
+<form action="add.php" method="POST" >
    <div>
       <label for="exampleInputEmail1">Name</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
@@ -29,7 +29,7 @@
     </div>
     <div class="form-group">
       <label for="exampleInputEmail1">Date of admission</label>
-      <input type="date" class="form-control" id="enroll_number" name="enroll_number" >
+      <input type="date" class="form-control" id="date" name="date" >
     </div>
     <div class="">
       <button type="submit" class="btn btn-primary">ADD STUDENT</button>
