@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,39 +47,27 @@
                                 </tr>
                             </thead>
                             <tbody>
-                               <?php
-                             
-                                $student =array( 
-                                  'img'=>'<img src="image/user.jpg" alt="user" style="width: 50px;">',
-                                  'Name'  =>'Uername',
-                                  'Email' =>'user@gmail.com',
-                                  'Phone' =>'12333445',
-                                  'Enroll Number' =>'123456789',
-                                  'Date of admission' =>'08-DEC,2021',
-                                  'icon1'=>' <i class="fas fa-pen mx-4 "></i>',
-                                  'icon2'=>' <i class="fas fa-trash   mx-4 "></i>'
-                          
-                                );
 
-                                for($i=0;$i<8;$i++){
-                                 echo"<tr>   
-                               
-                                 <td>".$student['img']."</td>
-                                 <td>".$student['Name'] ."</td>
-                                 <td>".$student['Email']."</td>
-                                 <td>".$student['Phone']."</td>
-                                 <td>".$student['Enroll Number']."</td>
-                                 <td>".$student['Date of admission']."</td>
-                                 <td>".$student['icon1']."</td>
-                                 <td>".$student['icon2']."</td>
-                              
-                                 </tr>";
-                              }
+                                <?php
+                                //incloude connection
+                                require_once 'connection.php' ;
+                                $req = 'SELECT * FROM students' ;
+                                $qer = mysqli_query($connection,$req) ;
+                                while($student = mysqli_fetch_assoc($qer)){
+                                ?>    
+                                <tr>   
+                                <td><img src="image/user.jpg" alt="user" style="width: 50px;"></td>
+                                 <td><?= $student['name'] ?></td>
+                                 <td><?= $student['email'] ?></td>
+                                 <td><?= $student['phone'] ?></td>
+                                 <td><?= $student['enroll_number'] ?></td>
+                                 <td><?= $student['date'] ?></td>
+                                 <td><i class="fas fa-pen mx-4 "></td>
+                                 <td><i class="fas fa-trash   mx-4 "></td>
+                                 </tr>
 
-
-
-                                ?>
-                             
+                                <?php } ?>
+                        
                             </tbody>
                         </table>
                     </div>
