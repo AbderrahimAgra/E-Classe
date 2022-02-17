@@ -49,8 +49,9 @@
                             <tbody>
 
                                 <?php
-                                //incloude connection
+ //*****************************incloude connection
                                 require_once 'connection.php' ;
+                                //affecter  a $eq la requette 
                                 $req = 'SELECT * FROM students' ;
                                 $qer = mysqli_query($connection,$req) ;
                                 while($student = mysqli_fetch_assoc($qer)){
@@ -62,12 +63,12 @@
                                  <td><?= $student['phone'] ?></td>
                                  <td><?= $student['enroll_number'] ?></td>
                                  <td><?= $student['date'] ?></td>
-                                 <td><i class="fas fa-pen mx-4 "></td>
-                                 <td><i class="fas fa-trash   mx-4 "></td>
+                                 <td><a><i class="fas fa-pen mx-4 "></td></a>
+                                 <td><a href="delete.php?id=<?= $student['id'];?>"><i class="fas fa-trash mx-4 "></td></a>
                                  </tr>
 
                                 <?php } ?>
-                        
+
                             </tbody>
                         </table>
                     </div>

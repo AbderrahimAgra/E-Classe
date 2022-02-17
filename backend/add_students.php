@@ -7,10 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ADD NEW STUDENTS</title>
 </head>
-<body>
+<body class="bg-light">
 
-<div class="container">
-<form action="add.php" method="POST" >
+<div class="container ">
+<div class="row vh-100 align-items-center justify-content-center">
+  <div class="col-md-12 text-center">
+    <h1 class="h1">ADD NEW STUDENTS</h1>
+  </div>
+  <div class="col-md-8">
+  <form action="add.php" method="POST" >
    <div>
       <label for="exampleInputEmail1">Name</label>
       <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
@@ -37,6 +42,9 @@
       
     </div>
 </form>
+  </div>
+</div>
+
 </div>
 </body>
 </html>

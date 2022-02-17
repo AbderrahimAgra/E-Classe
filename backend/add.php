@@ -6,10 +6,11 @@
  $date = $_POST['date'] ;
 
  require_once 'connection.php' ;
- 
+ //leschamps de table student(name,email,phone,enroll_number,date )  
 $sql = "INSERT INTO students (name,email,phone,enroll_number,date ) VALUES ('$name','$email','$phone','$e_num','$date')" ;
+//execution de la requet sql 
 if(mysqli_query($connection,$sql)){
-  echo " worked successfully ";
+  header('location: ./students.php');
 }
 else {
   echo "Error: " ;
