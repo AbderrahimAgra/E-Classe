@@ -53,12 +53,8 @@
                                   'Date'=>'05-Jan, 2022',
                                    'icon'=>'<i class="far fa-eye"></i>'
                            
-     
                                 );
                           
-                            
-                          
-           
                                 for($i=0;$i<8;$i++){
                                  echo"<tr>  
 
