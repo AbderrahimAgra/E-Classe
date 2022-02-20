@@ -1,4 +1,4 @@
-    <div class="bg" id="sidebar-dashboard">
+    <div class="bg vh-100" id="sidebar-dashboard">
         <div class="m-2 dark-text fs-5 fw-bold border-start  border-5 border-info px-2">
             E-classe
         </div>

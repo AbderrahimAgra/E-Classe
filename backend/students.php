@@ -63,7 +63,7 @@
                                  <td><?= $student['phone'] ?></td>
                                  <td><?= $student['enroll_number'] ?></td>
                                  <td><?= $student['date'] ?></td>
-                                 <td><a><i class="fas fa-pen mx-4 "></td></a>
+                                 <td><a href="update.php?id=<?= $student['id'];?>"><i class="fas fa-pen mx-4 "></td></a>
                                  <td><a href="delete.php?id=<?= $student['id'];?>"><i class="fas fa-trash mx-4 "></td></a>
                                  </tr>
 
