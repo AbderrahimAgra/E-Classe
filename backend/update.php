@@ -1,24 +1,20 @@
 <?php 
-
-$userId = $_GET["id"];
 require_once 'connection.php' ;
-$req= "SELECT * FROM students WHERE id=$userId";
+$userId = $_GET["id"];
+$req= "SELECT name,email,phone  FROM students WHERE id=$userId";
 $result = mysqli_query($connection , $req);
 while($student = mysqli_fetch_assoc($result)){
 
   $name = $student["name"];
   $email = $student["email"];
   $phone = $student["phone"];
-  $enroll_number = $student["enroll_number"];
-  $date = $student["date"];
-   
 }
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
   $req ="UPDATE students SET name='$name',email='$email' ,phone='$phone' WHERE id='$userId'";
   mysqli_query($connection,$req);
   header('location: ./update.php');
 }
-// header('location:students.php?updatesuccessfuly');
+
 
 
 
@@ -53,13 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       <label for="exampleInputEmail1">Phone</label>
       <input type="number" class="form-control" id="phone" name="phone" value="<?= $phone ?>"   placeholder="Enter number phone">
     </div>
-    <!-- <div class="form-group">
-      <label for="exampleInputEmail1">Enroll Number</label>
-      <input type="enumber" class="form-control" id="enroll_number" name="enroll_number" value="<?= $enroll_number ?>"   >
-    </div>
-    <div class="form-group">
-      <label for="exampleInputEmail1">Date of admission</label>
-      <input type="date" class="form-control" id="date" name="date" value="<?= $date ?>"   >
+   
     </div> -->
     <div class="">
       <button type="submit" class="btn btn-primary">ADD MODIFICATION</button>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,16 +25,16 @@
             <h2 class="text-uppercase fs-5">sign in </h2>
             <p class=" text-muted "> Enter your credentials to access your account</p>
           </div>
-           <form  action="dashboard.php">
+           <form  action="login.php" method="POST">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email </label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Entre your email">
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Entre your email">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control mb-4" placeholder="Entre your password" id="exampleInputPassword1">
+            <input type="password" class="form-control mb-4" name="password" placeholder="Entre your password" id="exampleInputPassword1">
           </div>
-          <button type="submit"class="btn  btn-info w-100 text-white text-uppercase  "> 
+          <button type="submit" name="submit" class="btn  btn-info w-100 text-white text-uppercase  "> 
             sign in
           </button>
           <div class="mt-3 text-center">
