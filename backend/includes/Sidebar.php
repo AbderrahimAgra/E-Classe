@@ -24,7 +24,7 @@
                     <i class="far fa-file-alt"></i> Report </a>
                 <a href="#" class="list-group-item mx-5 border-0 bg-transparent ">
                     <i class="fas fa-sliders-h"></i> Settings</a>
-                <a href="index.php" class="list-group-item mx-5 border-0   mt-5 mb-2 bg-transparent ">
+                <a href="./logout.php" class="list-group-item mx-5 border-0   mt-5 mb-2 bg-transparent ">
                     Logout <i class="fas fa-sign-out-alt"></i> </a>
         </div>
     </div>

@@ -1,18 +1,34 @@
 <?php 
 require_once 'connection.php' ;
-$userId = $_GET["id"];
-$req= "SELECT name,email,phone  FROM students WHERE id=$userId";
-$result = mysqli_query($connection , $req);
-while($student = mysqli_fetch_assoc($result)){
 
-  $name = $student["name"];
-  $email = $student["email"];
-  $phone = $student["phone"];
+// declaration des variables
+$name = "";
+$email = "";
+$phone = "";
+
+// get old Student data
+if(isset($_GET['id'])){
+  $userId = $_GET["id"];
+  $req= "SELECT name,email,phone  FROM students WHERE id=$userId";
+  $result = mysqli_query($connection , $req);
+  while($student = mysqli_fetch_assoc($result)){
+    $name = $student["name"];
+    $email = $student["email"];
+    $phone = $student["phone"];
+  }
 }
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+// update Student data
+if(isset($_POST['id'])){
+
+  $userId = $_POST["id"];
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $phone = $_POST["phone"];
+
   $req ="UPDATE students SET name='$name',email='$email' ,phone='$phone' WHERE id='$userId'";
   mysqli_query($connection,$req);
-  header('location: ./update.php');
+  header('location: ./students.php');
 }
 
 
@@ -36,7 +52,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <h1 class="h1">UPDATE</h1>
   </div>
   <div class="col-md-8">
-  <form action="update.php?id=<?=$userId ?>" method="POST" >
+  <form action="./update.php" method="POST" >
+    <input value="<?= $userId; ?>" name="id" hidden/>
    <div>
       <label for="exampleInputEmail1">Name</label>
       <input type="text" class="form-control" id="name" name="name" value="<?= $name ?>" placeholder="Enter name">
@@ -50,7 +67,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       <input type="number" class="form-control" id="phone" name="phone" value="<?= $phone ?>"   placeholder="Enter number phone">
     </div>
    
-    </div> -->
+    </div>
     <div class="">
       <button type="submit" class="btn btn-primary">ADD MODIFICATION</button>
      
