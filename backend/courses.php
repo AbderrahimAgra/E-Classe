@@ -1,8 +1,8 @@
 <?php
-session_start();
-if(!isset($_SESSION['user'])){
-  header("location: ./index.php?err=You have to login first!"); 
-}
+// session_start();
+// if(!isset($_SESSION['user'])){
+//   header("location: ./index.php?err=You have to login first!"); 
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">

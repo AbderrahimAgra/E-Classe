@@ -26,8 +26,7 @@
                         <div>
                             <i class="fas fa-sort mx-3 text-info "></i>
                             <a href="add_students.php"
-                            <button type="button" class="btn btn-info text-white"  > ADD NEW STUDENT</button>
-</a>
+                            <button type="button" class="btn btn-info text-white"  > ADD NEW STUDENT</button></a>
                       </div>
                     </div>
                           </div>
