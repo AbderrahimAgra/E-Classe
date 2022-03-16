@@ -29,10 +29,12 @@
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email </label>
             <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Entre your email">
+            <span class="validation-msg"></span>
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" class="form-control mb-4" name="password" placeholder="Entre your password" id="exampleInputPassword1">
+            <span class="validation-msg"></span>
           </div>
           <button type="submit" name="submit" class="btn  btn-info w-100 text-white text-uppercase  "> 
             sign in
@@ -47,6 +49,7 @@
       </div>
     </div>
   </main>
+  <script src="./js/validation.js"></script>
 </body>
 
 </html>
