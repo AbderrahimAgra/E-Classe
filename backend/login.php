@@ -13,9 +13,8 @@ session_start();
     $req = "SELECT * FROM user WHERE user_name='".$email."'";
     $qer = mysqli_query($connection,$req);
     $user = mysqli_fetch_assoc($qer);
-
     if(!empty($user)){
-      if($password === $user['password']){
+      if(password_verify($password,$user['password'])){
         $_SESSION['user'] = $user;
         header('location: ./dashboard.php');
       }else{
