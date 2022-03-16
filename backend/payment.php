@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(!isset($_SESSION['user'])){
+  header("location: ./index.php?err=You have to login first!"); 
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,7 +88,7 @@
         var el = document.getElementById("dashboard");
         var toggleButton = document.getElementById("menu-toggle");
         toggleButton.onclick = function () {
-            el.classList.toggle("toggled");
+        el.classList.toggle("toggled");
         };
     </script>
     </main>>

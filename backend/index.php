@@ -39,9 +39,9 @@
           </button>
           <div class="mt-3 text-center">
             <span class="text-muted">
-               Forgot your password? 
+               New to E-Classe ? 
             </span>
-             <a class="text-info text-decoration-underline" href=""> <span>Reset Password</span></a> 
+             <a class="text-info text-decoration-underline" href="signUp.php"> <span>creat My Account</span></a> 
           </div>
         </form>
       </div>
