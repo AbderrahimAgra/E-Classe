@@ -31,8 +31,7 @@ if(!isset($_SESSION['user'])){
                         <h1 class="fs-4 ">Students List</h1>
                         <div>
                             <i class="fas fa-sort mx-3 text-info "></i>
-                            <a href="add_students.php"
-                            <button type="button" class="btn btn-info text-white"  > ADD NEW STUDENT</button></a>
+                            <button type="button" class="btn btn-info text-white" data-toggle="modal" data-target="#add-new-student"  > ADD NEW STUDENT</button>
                       </div>
                     </div>
                           </div>
@@ -61,16 +60,16 @@ if(!isset($_SESSION['user'])){
                                 $qer = mysqli_query($connection,$req) ;
                                 while($student = mysqli_fetch_assoc($qer)){
                                 ?>    
-                                <tr>   
-                                <td><img src="image/user.jpg" alt="user" style="width: 50px;"></td>
-                                 <td><?= $student['name'] ?></td>
-                                 <td><?= $student['email'] ?></td>
-                                 <td><?= $student['phone'] ?></td>
-                                 <td><?= $student['enroll_number'] ?></td>
-                                 <td><?= $student['date'] ?></td>
-                                 <td><a href="update.php?id=<?= $student['id'];?>"><i class="fas fa-pen mx-4 "></td></a>
-                                 <td><a href="delete.php?id=<?= $student['id'];?>"><i class="fas fa-trash mx-4 "></td></a>
-                                 </tr>
+                                <tr  data-id="<?= $student['id'];?>">   
+                                    <td role="avatar"><img src="image/user.jpg" alt="user" style="width: 50px;"></td>
+                                    <td role="name"><?= $student['name'] ?></td>
+                                    <td role="email"><?= $student['email'] ?></td>
+                                    <td role="phone"><?= $student['phone'] ?></td>
+                                    <td role="enrole_number"><?= $student['enroll_number'] ?></td>
+                                    <td role="date"><?= $student['date'] ?></td>
+                                    <td><button class="btn btn-primary text-white" data-toggle="modal" data-target="#update-new-student" onclick="setStudentData(<?= $student['id'];?>)" ><i class="fas fa-pen mx-4 text-white"></button></td>
+                                    <td><a class="btn btn-danger " href="delete.php?id=<?= $student['id'];?>"><i class="fas fa-trash mx-4 text-white"></td></a>
+                                </tr>
 
                                 <?php } ?>
 
@@ -81,7 +80,12 @@ if(!isset($_SESSION['user'])){
             </div>
         </div>
     </div>
+    <?php include "./modals/add-student.php" ?>
+    <?php include "./modals/update-student.php" ?>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
         var el = document.getElementById("dashboard");
         var toggleButton = document.getElementById("menu-toggle");
@@ -91,6 +95,7 @@ if(!isset($_SESSION['user'])){
     </script>
     </main>
   
+
 </body>
 
 </html>
