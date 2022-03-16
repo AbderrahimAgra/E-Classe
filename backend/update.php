@@ -7,16 +7,16 @@ $email = "";
 $phone = "";
 
 // get old Student data
-if(isset($_GET['id'])){
-  $userId = $_GET["id"];
-  $req= "SELECT name,email,phone  FROM students WHERE id=$userId";
-  $result = mysqli_query($connection , $req);
-  while($student = mysqli_fetch_assoc($result)){
-    $name = $student["name"];
-    $email = $student["email"];
-    $phone = $student["phone"];
-  }
-}
+// if(isset($_GET['id'])){
+//   $userId = $_GET["id"];
+//   $req= "SELECT name,email,phone  FROM students WHERE id=$userId";
+//   $result = mysqli_query($connection , $req);
+//   while($student = mysqli_fetch_assoc($result)){
+//     $name = $student["name"];
+//     $email = $student["email"];
+//     $phone = $student["phone"];
+//   }
+// }
 
 // update Student data
 if(isset($_POST['id'])){
@@ -31,11 +31,11 @@ if(isset($_POST['id'])){
   header('location: ./students.php');
 }
 
-
+echo $_POST["id"];
 
 
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -79,4 +79,4 @@ if(isset($_POST['id'])){
 
 </div>
 </body>
-</html>
+</html> -->
