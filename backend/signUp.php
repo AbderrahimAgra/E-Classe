@@ -21,32 +21,41 @@
                 <h2 class="text-uppercase fs-5 "> sign Up </h2>
                 <p class=" text-muted "> </p>
             </div>
-            <form  action="addUser.php" method="POST">
-              <div>
-                <label for="exampleInputPassword1" class="form-label">Full name</label>
-              <input required type="text" class="form-control mb-2 w-75" name="fName">
-              <span class="validation-msg"></span>
-              </div>
-              <div>                
-                <label for="exampleInputPassword1" class="form-label">Email</label>
-                <input required type="email" class="form-control mb-2 w-75" name="email">
-                <span class="validation-msg"></span>
-              </div>
-              <div>                
-                <label for="exampleInputPassword1" class="form-label">mobile number</label>
-                <input required type="phone" class="form-control mb-2 w-75" name="phoneNumber">
-                <span class="validation-msg"></span>
-              </div>
-              <div>                
-                <label for="exampleInputPassword1" class="form-label">New password</label>
-                <input required type="password" class="form-control mb-2 w-75 " name="password">
-                <span class="validation-msg"></span>
-              </div>
+               <div class="container-fluid   ">
+                  <form  action="addUser.php" method="POST" >
+                      <div>
+                        <label for="exampleInputPassword1" class="form-label">Full name</label>
+                        <input required type="text" class="form-control mb-2 w-75" name="fName">
+                        <span class="validation-msg"></span>
+                      </div>
 
-              <button type="submit" name="submit" class="btn  btn-info w-50 text-white text-uppercase  "> sign up </button>
-            </form>
-            <div>
-          <a href="index.php" class="btn btn-outline-info w-50 mt-4 "> LOGIN </a>
+                      <div>                
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input required type="email" class="form-control mb-2 w-75" name="email">
+                        <span class="validation-msg"></span>
+                      </div>
+
+                      <div>                
+                        <label for="exampleInputPassword1" class="form-label">mobile number</label>
+                        <input required type="phone" class="form-control mb-2 w-75" name="phoneNumber">
+                        <span class="validation-msg"></span>
+                      </div>
+
+                      <div>                
+                        <label for="exampleInputPassword1" class="form-label">New password</label>
+                        <input required type="password" class="form-control mb-2 w-75 " name="password">
+                        <span class="validation-msg"></span>
+                      </div>
+
+                      <div class="d-flex justify-content-center align-items-center">
+                        <button type="submit" name="submit" class="btn  btn-info w-50 text-white text-uppercase  "> sign up </button>
+                      </div>
+                  </form>
+               </div>
+
+               
+            <div class="d-flex justify-content-center align-items-center">
+          <a href="index.php" class="btn btn-outline-info w-50 mt-4  "> LOGIN </a>
             </div>
             
           </div>
